@@ -170,5 +170,25 @@ namespace Lab01
             textBoxSubjectID.Clear();
             textBoxSubjectName.Clear();
         }
+
+        private void ToolStripMenuItemStudent_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formStudent);
+        }
+
+        private void FormResult_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormController.Close(this);
+        }
+
+        private void ToolStripMenuItemSubject_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formSubject);
+        }
+
+        private void ToolStripMenuItemResult_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formResult);
+        }
     }
 }

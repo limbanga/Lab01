@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 
 namespace Lab01
 {
@@ -209,6 +210,26 @@ namespace Lab01
             //currentResult.Place = place;
 
             buttonSave.Enabled = true;
+        }
+
+        private void ToolStripMenuItemStudent_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formStudent);
+        }
+
+        private void FormResult_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormController.Close(this);
+        }
+
+        private void ToolStripMenuItemSubject_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formSubject);
+        }
+
+        private void ToolStripMenuItemResult_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formResult);
         }
     }
 }

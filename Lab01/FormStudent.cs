@@ -227,5 +227,26 @@ namespace Lab01
             //PrintDialog printDialog = new PrintDialog();
             //printDialog.ShowDialog();
         }
+
+        private void ToolStripMenuItemStudent_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formStudent);
+        }
+
+        private void FormResult_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormController.Close(this);
+        }
+
+        private void ToolStripMenuItemSubject_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formSubject);
+        }
+
+        private void ToolStripMenuItemResult_Click(object sender, EventArgs e)
+        {
+            FormController.Change(this, FormController.formResult);
+        }
+
     }
 }

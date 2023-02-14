@@ -55,11 +55,17 @@
             this.dobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ToolStripMenuItemManagement = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemSubject = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemResult = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -315,11 +321,54 @@
             // 
             this.studentBindingSource.DataSource = typeof(Lab01.Student);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemManagement});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(981, 28);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ToolStripMenuItemManagement
+            // 
+            this.ToolStripMenuItemManagement.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemStudent,
+            this.ToolStripMenuItemSubject,
+            this.ToolStripMenuItemResult});
+            this.ToolStripMenuItemManagement.Name = "ToolStripMenuItemManagement";
+            this.ToolStripMenuItemManagement.Size = new System.Drawing.Size(73, 24);
+            this.ToolStripMenuItemManagement.Text = "Quản lý";
+            // 
+            // ToolStripMenuItemStudent
+            // 
+            this.ToolStripMenuItemStudent.Name = "ToolStripMenuItemStudent";
+            this.ToolStripMenuItemStudent.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemStudent.Text = "Sinh viên";
+            this.ToolStripMenuItemStudent.Click += new System.EventHandler(this.ToolStripMenuItemStudent_Click);
+            // 
+            // ToolStripMenuItemSubject
+            // 
+            this.ToolStripMenuItemSubject.Name = "ToolStripMenuItemSubject";
+            this.ToolStripMenuItemSubject.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemSubject.Text = "Đề tài";
+            this.ToolStripMenuItemSubject.Click += new System.EventHandler(this.ToolStripMenuItemSubject_Click);
+            // 
+            // ToolStripMenuItemResult
+            // 
+            this.ToolStripMenuItemResult.Name = "ToolStripMenuItemResult";
+            this.ToolStripMenuItemResult.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemResult.Text = "Kết quả";
+            this.ToolStripMenuItemResult.Click += new System.EventHandler(this.ToolStripMenuItemResult_Click);
+            // 
             // FormStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(981, 711);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -332,7 +381,10 @@
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudent)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -364,5 +416,10 @@
         private DataGridViewTextBoxColumn dobDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn scoreDataGridViewTextBoxColumn;
         private ComboBox comboBoxTown;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem ToolStripMenuItemManagement;
+        private ToolStripMenuItem ToolStripMenuItemStudent;
+        private ToolStripMenuItem ToolStripMenuItemSubject;
+        private ToolStripMenuItem ToolStripMenuItemResult;
     }
 }

@@ -55,11 +55,17 @@
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemSubject = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemResult = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewResult
@@ -163,9 +169,9 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.comboBoxSubject);
             this.groupBox2.Controls.Add(this.comboBoxStudent);
-            this.groupBox2.Location = new System.Drawing.Point(18, 12);
+            this.groupBox2.Location = new System.Drawing.Point(18, 31);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(898, 161);
+            this.groupBox2.Size = new System.Drawing.Size(898, 142);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin kết quả thực tập";
@@ -297,6 +303,48 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(945, 28);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemStudent,
+            this.ToolStripMenuItemSubject,
+            this.ToolStripMenuItemResult});
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.quảnLýToolStripMenuItem.Text = "Quản lý";
+            // 
+            // ToolStripMenuItemStudent
+            // 
+            this.ToolStripMenuItemStudent.Name = "ToolStripMenuItemStudent";
+            this.ToolStripMenuItemStudent.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemStudent.Text = "Sinh viên";
+            this.ToolStripMenuItemStudent.Click += new System.EventHandler(this.ToolStripMenuItemStudent_Click);
+            // 
+            // ToolStripMenuItemSubject
+            // 
+            this.ToolStripMenuItemSubject.Name = "ToolStripMenuItemSubject";
+            this.ToolStripMenuItemSubject.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemSubject.Text = "Đề tài";
+            this.ToolStripMenuItemSubject.Click += new System.EventHandler(this.ToolStripMenuItemSubject_Click);
+            // 
+            // ToolStripMenuItemResult
+            // 
+            this.ToolStripMenuItemResult.Name = "ToolStripMenuItemResult";
+            this.ToolStripMenuItemResult.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemResult.Text = "Kết quả";
+            this.ToolStripMenuItemResult.Click += new System.EventHandler(this.ToolStripMenuItemResult_Click);
+            // 
             // FormResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -305,8 +353,11 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormResult";
             this.Text = "FormResult";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormResult_FormClosed);
             this.Load += new System.EventHandler(this.FormResult_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewResult)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.resultBindingSource)).EndInit();
@@ -314,7 +365,10 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -346,5 +400,10 @@
         private Button buttonSave;
         private Button buttonCancel;
         private GroupBox groupBox3;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem quảnLýToolStripMenuItem;
+        private ToolStripMenuItem ToolStripMenuItemStudent;
+        private ToolStripMenuItem ToolStripMenuItemSubject;
+        private ToolStripMenuItem ToolStripMenuItemResult;
     }
 }

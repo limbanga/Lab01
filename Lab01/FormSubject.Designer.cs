@@ -53,12 +53,18 @@
             this.textBoxSubjectID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.subjectBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemSubject = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemResult = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox3
@@ -205,9 +211,9 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.textBoxSubjectID);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(22, 12);
+            this.groupBox1.Location = new System.Drawing.Point(22, 31);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(928, 164);
+            this.groupBox1.Size = new System.Drawing.Size(928, 145);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin đề tài";
@@ -289,16 +295,60 @@
             // 
             this.subjectBindingSource.DataSource = typeof(Lab01.Subject);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.quảnLýToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(978, 28);
+            this.menuStrip1.TabIndex = 10;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // quảnLýToolStripMenuItem
+            // 
+            this.quảnLýToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemStudent,
+            this.ToolStripMenuItemSubject,
+            this.ToolStripMenuItemResult});
+            this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.quảnLýToolStripMenuItem.Text = "Quản lý";
+            // 
+            // ToolStripMenuItemStudent
+            // 
+            this.ToolStripMenuItemStudent.Name = "ToolStripMenuItemStudent";
+            this.ToolStripMenuItemStudent.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemStudent.Text = "Sinh viên";
+            this.ToolStripMenuItemStudent.Click += new System.EventHandler(this.ToolStripMenuItemStudent_Click);
+            // 
+            // ToolStripMenuItemSubject
+            // 
+            this.ToolStripMenuItemSubject.Name = "ToolStripMenuItemSubject";
+            this.ToolStripMenuItemSubject.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemSubject.Text = "Đề tài";
+            this.ToolStripMenuItemSubject.Click += new System.EventHandler(this.ToolStripMenuItemSubject_Click);
+            // 
+            // ToolStripMenuItemResult
+            // 
+            this.ToolStripMenuItemResult.Name = "ToolStripMenuItemResult";
+            this.ToolStripMenuItemResult.Size = new System.Drawing.Size(224, 26);
+            this.ToolStripMenuItemResult.Text = "Kết quả";
+            this.ToolStripMenuItemResult.Click += new System.EventHandler(this.ToolStripMenuItemResult_Click);
+            // 
             // FormSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 716);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormSubject";
             this.Text = "Quản lý đề tài";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormResult_FormClosed);
             this.Load += new System.EventHandler(this.FormSubject_Load);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSubject)).EndInit();
@@ -307,7 +357,10 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subjectBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -337,5 +390,10 @@
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn superviserDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn expenseDataGridViewTextBoxColumn;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem quảnLýToolStripMenuItem;
+        private ToolStripMenuItem ToolStripMenuItemStudent;
+        private ToolStripMenuItem ToolStripMenuItemSubject;
+        private ToolStripMenuItem ToolStripMenuItemResult;
     }
 }
